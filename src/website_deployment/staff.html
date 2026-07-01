@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historic Theatre Poster Staff</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="search-shell">
+    <section class="hero">
+      <div class="hero-topline">
+        <div>
+          <p class="eyebrow">Staff Interface</p>
+          <h1>Poster Admin</h1>
+        </div>
+        <div class="brand-lockup" aria-label="Sinaran">
+          <img class="brand-image" src="images/sinaran_logo-Photoroom.png" alt="Sinaran logo">
+        </div>
+      </div>
+      <p class="subtitle">Upload posters into the shared archive and search the same poster collection used by the public interface with SQL-style matching.</p>
+    </section>
+
+    <section class="search-panel" aria-label="Search staff poster database">
+      <form class="search-bar" id="staffSearchForm">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10.5 4a6.5 6.5 0 1 0 4.08 11.56l4.43 4.43 1.4-1.4-4.43-4.43A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"/>
+        </svg>
+        <input id="staffSearchInput" type="search" placeholder="Search archive posters, performers, categories, or citations..." aria-label="Search staff archive">
+        <button class="filter-button" id="staffFilterToggle" type="button" aria-label="Open category filters" aria-expanded="false" aria-controls="staffFilterDropdown">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 5h18l-7 8v5l-4 2v-7L3 5Z"/>
+          </svg>
+        </button>
+        <button class="search-submit" type="submit" aria-label="Search archive posters">Search</button>
+      </form>
+      <div class="filter-dropdown hidden" id="staffFilterDropdown" aria-label="Filter by staff category">
+        <button type="button" class="filter-chip active" data-category="">All Categories</button>
+        <button type="button" class="filter-chip" data-category="Stunt performers">Stunt performers</button>
+        <button type="button" class="filter-chip" data-category="Comedians">Comedians</button>
+        <button type="button" class="filter-chip" data-category="Gymnasts">Gymnasts</button>
+        <button type="button" class="filter-chip" data-category="Musicians">Musicians</button>
+        <button type="button" class="filter-chip" data-category="Dance">Dance</button>
+        <button type="button" class="filter-chip" data-category="Singing">Singing</button>
+        <button type="button" class="filter-chip" data-category="Imitation">Imitation</button>
+        <button type="button" class="filter-chip" data-category="Animal trainers">Animal trainers</button>
+        <button type="button" class="filter-chip" data-category="Male impersonators">Male impersonators</button>
+        <button type="button" class="filter-chip" data-category="Tightrope walking">Tightrope walking</button>
+        <button type="button" class="filter-chip" data-category="Acrobats">Acrobats</button>
+        <button type="button" class="filter-chip" data-category="Motion pictures">Motion pictures</button>
+        <button type="button" class="filter-chip" data-category="Jugglers">Jugglers</button>
+        <button type="button" class="filter-chip" data-category="Magic">Magic</button>
+        <button type="button" class="filter-chip" data-category="Circus">Circus</button>
+      </div>
+    </section>
+
+    <section class="grid staff-grid">
+      <article class="card upload-card">
+        <div class="card-header">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v12m0-12 4 4m-4-4-4 4M5 15v4h14v-4"/>
+          </svg>
+          <h2>Upload Poster</h2>
+        </div>
+        <form id="uploadForm" class="staff-form">
+          <input type="file" id="posterImage" accept="image/*" hidden>
+          <button type="button" class="upload-dropzone" id="uploadTrigger" aria-label="Choose poster image to upload">
+            <span class="upload-remove hidden" id="uploadRemove" aria-label="Remove selected image">&times;</span>
+            <img class="upload-preview hidden" id="uploadPreview" alt="Selected poster preview">
+            <span class="upload-plus">+</span>
+            <span class="upload-title">Add</span>
+            <span class="upload-copy">Click to choose an image file and add it to the shared archive database.</span>
+            <span class="upload-filename" id="uploadFilename">No file selected</span>
+          </button>
+          <button class="search-submit" type="submit">Upload to Database</button>
+          <p class="staff-status" id="uploadStatus">Ready to add a poster record into the shared SQLite archive.</p>
+        </form>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h10"/>
+          </svg>
+          <h2>Recent Searches</h2>
+        </div>
+        <p class="staff-summary" id="staffSummary">Your latest staff searches appear here so repeated archive lookups can be rerun quickly.</p>
+        <ul class="topic-list" id="staffRecentSearches"></ul>
+      </article>
+    </section>
+
+    <section class="results-card" aria-live="polite">
+      <div class="results-copy">
+        <p class="results-label">Staff Query</p>
+        <h3 id="staffResultsTitle">Staff poster database</h3>
+        <p id="staffResultsDescription">Shared archive records will appear here with SQL-backed search results.</p>
+      </div>
+    </section>
+
+    <section class="results-list" id="staffResultsList" aria-live="polite"></section>
+  </main>
+
+  <script src="staff.js"></script>
+</body>
+</html>
