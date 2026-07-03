@@ -1,0 +1,125 @@
+{
+  "file_matching_summary": {
+    "total_unique_files_extracted": 24,
+    "total_unique_files_reference": 30,
+    "successfully_matched_files": 24,
+    "missing_files_count": 6,
+    "missing_files": [
+      "NFA178R12-10",
+      "NFA178R12-17",
+      "NFA178R12-204",
+      "NFA178R12-263",
+      "NFA178R12-28",
+      "NFA178R12-9"
+    ]
+  },
+  "average_metrics": {
+    "failed": {
+      "aspect_ratio": 2.89,
+      "size_kb": 1812.64
+    },
+    "success": {
+      "aspect_ratio": 2.89875,
+      "size_kb": 2123.556667
+    }
+  },
+  "failed_files": [
+    {
+      "filename": "NFA178R12-28.jpg",
+      "width": 1500,
+      "height": 4208,
+      "aspect_ratio": 2.81,
+      "size_kb": 1383.60,
+      "status": "Failed"
+    },
+    {
+      "filename": "NFA178R12-204.jpg",
+      "width": 1500,
+      "height": 4501,
+      "aspect_ratio": 3.00,
+      "size_kb": 2669.30,
+      "status": "Failed"
+    },
+    {
+      "filename": "NFA178R12-10.jpg",
+      "width": 1500,
+      "height": 4345,
+      "aspect_ratio": 2.90,
+      "size_kb": 1393.72,
+      "status": "Failed"
+    },
+    {
+      "filename": "NFA178R12-9.jpg",
+      "width": 1500,
+      "height": 4315,
+      "aspect_ratio": 2.88,
+      "size_kb": 1594.07,
+      "status": "Failed"
+    },
+    {
+      "filename": "NFA178R12-17.jpg",
+      "width": 1500,
+      "height": 4194,
+      "aspect_ratio": 2.80,
+      "size_kb": 1357.52,
+      "status": "Failed"
+    },
+    {
+      "filename": "NFA178R12-263.jpg",
+      "width": 1500,
+      "height": 4432,
+      "aspect_ratio": 2.95,
+      "size_kb": 2477.63,
+      "status": "Failed"
+    }
+  ],
+  "forensic_image_analysis": {
+    "rejected": {
+      "blur_score": 347.327722,
+      "contrast": 64.931683,
+      "brightness": 152.166712
+    },
+    "success": {
+      "blur_score": 674.273302,
+      "contrast": 65.640716,
+      "brightness": 151.527777
+    }
+  },
+  "data_science_insights": [
+    "Contrast Gap: Success files have 1.1% higher contrast.",
+    "Sharpness Gap: Success files are 94.1% sharper (less blurry)."
+  ],
+  "extraction_completeness_analysis": {
+    "sample_size": 24,
+    "posters_with_100_percent_matching_act_counts": 4,
+    "posters_where_ai_missed_acts": 11,
+    "posters_where_ai_found_extra_acts": 9,
+    "overall_extraction_recall_percent": 100.9
+  },
+  "detailed_comparison_table": [
+    {"file_id": "NFA178R12-103", "manual_act_count": 10, "ai_act_count": 10, "difference": 0},
+    {"file_id": "NFA178R12-104", "manual_act_count": 11, "ai_act_count": 10, "difference": -1},
+    {"file_id": "NFA178R12-16", "manual_act_count": 12, "ai_act_count": 9, "difference": -3},
+    {"file_id": "NFA178R12-18", "manual_act_count": 8, "ai_act_count": 10, "difference": 2},
+    {"file_id": "NFA178R12-205", "manual_act_count": 10, "ai_act_count": 9, "difference": -1},
+    {"file_id": "NFA178R12-207", "manual_act_count": 11, "ai_act_count": 10, "difference": -1},
+    {"file_id": "NFA178R12-208", "manual_act_count": 10, "ai_act_count": 13, "difference": 3},
+    {"file_id": "NFA178R12-209", "manual_act_count": 11, "ai_act_count": 10, "difference": -1},
+    {"file_id": "NFA178R12-211", "manual_act_count": 10, "ai_act_count": 12, "difference": 2},
+    {"file_id": "NFA178R12-215", "manual_act_count": 12, "ai_act_count": 9, "difference": -3},
+    {"file_id": "NFA178R12-220", "manual_act_count": 9, "ai_act_count": 14, "difference": 5},
+    {"file_id": "NFA178R12-258", "manual_act_count": 7, "ai_act_count": 9, "difference": 2},
+    {"file_id": "NFA178R12-259", "manual_act_count": 11, "ai_act_count": 8, "difference": -3},
+    {"file_id": "NFA178R12-26", "manual_act_count": 11, "ai_act_count": 10, "difference": -1},
+    {"file_id": "NFA178R12-262", "manual_act_count": 11, "ai_act_count": 9, "difference": -2},
+    {"file_id": "NFA178R12-267", "manual_act_count": 8, "ai_act_count": 10, "difference": 2},
+    {"file_id": "NFA178R12-30", "manual_act_count": 9, "ai_act_count": 9, "difference": 0},
+    {"file_id": "NFA178R12-35", "manual_act_count": 12, "ai_act_count": 10, "difference": -2},
+    {"file_id": "NFA178R12-37", "manual_act_count": 10, "ai_act_count": 10, "difference": 0},
+    {"file_id": "NFA178R12-38", "manual_act_count": 10, "ai_act_count": 11, "difference": 1},
+    {"file_id": "NFA178R12-39", "manual_act_count": 11, "ai_act_count": 11, "difference": 0},
+    {"file_id": "NFA178R12-40", "manual_act_count": 9, "ai_act_count": 8, "difference": -1},
+    {"file_id": "NFA178R12-41", "manual_act_count": 9, "ai_act_count": 12, "difference": 3},
+    {"file_id": "NFA178R12-43", "manual_act_count": 1, "ai_act_count": 2, "difference": 1}
+  ]
+}
